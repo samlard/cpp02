@@ -136,7 +136,6 @@ Fixed Fixed::operator--(int)
     return temp;
 }
 
-
 Fixed& Fixed::min(Fixed &a, Fixed &b) 
 {
     return (a < b) ? a : b;

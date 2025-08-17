@@ -18,7 +18,8 @@ Fixed::Fixed(const float i) : _value(roundf(i * (1 << _fractionalBits)))
 Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = other;
+    if (this != &other)
+        *this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
