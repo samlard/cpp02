@@ -4,7 +4,6 @@ CC              =       c++
 
 CFLAGS  =       -Wall -Wextra -Werror -std=c++98 
 
-GFLAGS  =       -g
 
 #---------------------------------------------------------#
 
@@ -24,10 +23,10 @@ NAME    =	fixed
 all:            $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	$(CC) $(CFLAGS) $(GFLAGS) $(OBJ) -o $@
+	$(CC) $(CFLAGS) $(OBJ) -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(GFLAGS) -I$(INC_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
