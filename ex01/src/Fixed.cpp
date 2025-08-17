@@ -15,9 +15,10 @@ Fixed::Fixed(const float i) : _value(roundf(i * (1 << _fractionalBits)))
     std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& other) : _value(other._value)
+Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
+    *this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
